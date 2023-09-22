@@ -1,0 +1,22 @@
+.table {
+  border-collapse: collapse;
+  width: 700px;
+  display: block;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    width: 5%;
+  }
+
+  th {
+    text-align: center;
+    background-color: #777;
+    color: #fff;
+  }
+}
+
+.selected-employee {
+  background-color: #ffa500;
+}
