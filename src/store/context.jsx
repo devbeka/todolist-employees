@@ -15,9 +15,9 @@ const Context = (props) => {
   const [employmentStatus, setEmploymentStatus] = useState('Unemployed')
   const [selectedEmployeeId, setSelectedEmployeeId] = useState(null)
   const [isMode, setIsMode] = useState(() => {
-    const storedMode = localStorage.getItem('isMode');
-    return storedMode ? JSON.parse(storedMode) : false;
-  });
+    const storedMode = localStorage.getItem('isMode')
+    return storedMode ? JSON.parse(storedMode) : false
+  })
 
   const [employees, setEmployees] = useState(() => {
     const storedEmployees = localStorage.getItem('employees')
@@ -43,7 +43,7 @@ const Context = (props) => {
 
   useEffect(() => {
     localStorage.setItem('employees', JSON.stringify(employees))
-    localStorage.setItem('isMode', JSON.stringify(isMode));
+    localStorage.setItem('isMode', JSON.stringify(isMode))
   }, [employees, isMode])
 
   const toggleMode = () => {
@@ -73,6 +73,7 @@ const Context = (props) => {
     setAge('')
     setSibscribe(options[0].value)
     setIsChecked(false)
+    setEmploymentStatus('Unemployed')
   }
 
   const handleSelectEmployee = (id) => {
